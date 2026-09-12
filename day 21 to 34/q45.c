@@ -1,0 +1,16 @@
+#include <stdio.h>
+/* Series: 2/3 + 4/7 + 6/11 + 8/15 + ... up to n terms
+   Term i = 2i / (4i - 1) */
+int main() {
+    int n;
+    double sum = 0.0;
+    printf("Enter number of terms: ");
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++) {
+        double numerator = 2 * i;
+        double denominator = 4 * i - 1;
+        sum += numerator / denominator;
+    }
+    printf("Approximate sum: %.2lf\n", sum);
+    return 0;
+}
